@@ -1,0 +1,24 @@
+<header class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
+  <h1>{{$ctrl.title}}</h1>
+</header>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li ng-if="$ctrl.page == '/'" class="breadcrumb-item active" aria-current="page">
+      Plataformas
+    </li>
+    <li ng-if="$ctrl.page !== '/'" class="breadcrumb-item">
+      <a href="/">Plataformas</a>
+    </li>
+    <li ng-if="$ctrl.page == '/contato'" class="breadcrumb-item">
+      <a href="{{$ctrl.linkPlanos}}">Planos</a>
+    </li>
+    <li ng-if="$ctrl.page !== '/' && $ctrl.page !== '/contato'" class="breadcrumb-item active" aria-current="page">
+      Planos
+    </li>
+    <li ng-if="$ctrl.page == '/contato'" class="breadcrumb-item active" aria-current="page">
+      Contato
+    </li>
+  </ol>
+</nav>
+
+<!-- <li class="breadcrumb-item active" aria-current="page">Data</li> -->

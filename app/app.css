@@ -1,0 +1,22 @@
+header{
+    background-color: #004085d4;
+    min-height: 4rem
+}
+header h1{
+    color: #fff
+}
+#loading-bar .bar{
+    background: red
+}
+.plataformas .card, .planoAparelho{
+    min-height: 205px
+}
+.form-group label{
+    text-align: end
+}
+.css-form input.ng-invalid.ng-touched {
+    border-color: #bd2130;
+}
+.css-form input.ng-valid.ng-touched {
+    border-color: #ced4da;
+}

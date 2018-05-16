@@ -1,0 +1,60 @@
+<div class="card-group">
+    <div class="flex col-sm-4 mt-2" ng-repeat="plano in planos">
+        <div ng-if="!plano.aparelho" class="card">
+            <div class="card-body">
+                <h5 class="card-title">Franquia de
+                    <strong>{{plano.franquia}}</strong>
+                </h5>
+                <p class="card-text">Por apenas
+                    <strong>R${{plano.valor}}</strong>
+                </p>
+                <div class="btn btn-primary" ng-click="clickPlano(plano)">Comprar </div>
+            </div>
+        </div>
+
+        <div ng-if="plano.aparelho" class="planoAparelho card">
+            <div class="card-body">
+                <h5 class="card-title">Franquia de
+                    <strong>{{plano.franquia}}</strong>
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted">Por apenas
+                    <strong>R${{plano.valor}}</strong>
+                </h6>
+                <p ng-if="plano.aparelho.valorParcela" class="card-text">
+                    Com {{plano.aparelho.nome}} por apenas
+                    <strong>R${{plano.aparelho.valor}}</strong>
+                    <br>
+                    <small>ou {{plano.aparelho.numeroParcelas}}x de
+                        <strong>R${{plano.aparelho.valorParcela}}</strong>
+                    </small>
+                </p>
+                <p ng-if="!plano.aparelho.valorParcela" class="card-text">
+                    Com {{plano.aparelho.nome}} por apenas
+                    <strong>R${{plano.aparelho.valor}}</strong>
+                </p>
+                <div ng-if="!plano.aparelho.valorParcela" class="btn mt-4 btn-primary" ng-click="clickPlano(plano)">Comprar </div>
+                <div ng-if="plano.aparelho.valorParcela" class="btn btn-primary" ng-click="clickPlano(plano)">Comprar </div>
+            </div>
+        </div>
+        <!-- <pre>{{plano}}</pre> -->
+    </div>
+</div>
+
+<!-- 
+    <div ng-repeat="plano in planos">
+        <div>{{plano}}</div>
+        <button ng-click="clickPlano(plano)">Comprar</button>
+    </div>
+    
+<div class="row">
+    <div class="flex  col-sm-4" ng-repeat="plataforma in plataformas">
+        <div class="card">
+            <h5 class="card-header">{{plataforma.nome}}</h5>
+            <div class="card-body">
+                <h5 class="card-title">{{plataforma.descricao}}</h5>
+                <p class="card-text">{{plataforma.descricao2}}></p
+                <div ng-click="clickPlataforma(plataforma)" class="btn btn-primary">Quero esse!</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<form novalidate name="form" ng-submit="salvar(form, formUsuario)" class="css-form">
+    <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Nome</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" ng-model="formUsuario.nome" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" ng-model="formUsuario.email" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Data de nascimento</label>
+        <div class="col-sm-10">
+            <input type="date" class="form-control" ng-model="formUsuario.nascimento" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">CPF</label>
+        <div class="col-sm-10">
+            <input type="text" ng-cpf ui-mask="999.999.999-99" class="form-control" ng-model="formUsuario.CPF" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label">Telefone</label>
+        <div class="col-sm-10">
+            <input type="text" ui-mask="(99) 9999-9999?9?" class="form-control" ng-model="formUsuario.telefone" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="colFormLabel" class="col-sm-2 col-form-label"></label>
+        <div class="col-sm-10">
+            <input type="submit" class="btn-primary btn" value="Salvar" />
+        </div>
+    </div>
+
+</form>
+
+
+
+<!--  
+    <pre>formUsuario = {{formUsuario | json}}</pre>
+    <pre>usuario = {{usuario | json}}</pre>
+
+<label>Nome:
+        <input type="text" ng-model="formUsuario.nome" required />
+    </label>
+    <br />
+    <label>E-mail:
+        <input type="email" ng-model="formUsuario.email" required />
+    </label>
+    <br />
+    <label>Data de nascimento
+        <input type="date" ng-model="formUsuario.nascimento" required />
+    </label>
+    <br />
+    <label>CPF:
+        <input ng-cpf ui-mask="999.999.999-99" ng-model="formUsuario.CPF" required />
+    </label>
+    <br />
+    <label>Telefone:
+        <input type="text" ui-mask="{{mask}}" ng-keyup="onKeyUp()" ng-model="formUsuario.telefone" required />
+    </label>
+    <br />
+    <input type="submit" ng-click="salvar(formUsuario)" value="Salvar" />

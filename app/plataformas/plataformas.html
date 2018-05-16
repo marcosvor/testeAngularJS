@@ -1,0 +1,12 @@
+<div class="plataformas card-group">
+    <div class="flex col-sm-4" ng-repeat="plataforma in plataformas">
+        <div class="card">
+            <h5 class="card-header">{{plataforma.nome}}</h5>
+            <div class="card-body">
+                <h5 class="card-title">{{plataforma.descricao}}</h5>
+                <p class="card-text">{{plataforma.descricao2}}</p>
+                <div ng-click="clickPlataforma(plataforma)" class="btn btn-primary">Quero esse!</div>
+            </div>
+        </div>
+    </div>
+</div>
